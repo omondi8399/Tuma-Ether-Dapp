@@ -14,7 +14,7 @@ const Profile = ({ currentAccount }) => {
     <div className={Style.profile}>
       <div className={Style.profile_account}>
         <Image
-          src={images.user3}
+          src={images.nft_image_2}
           alt="user profile"
           width={50}
           height={50}
