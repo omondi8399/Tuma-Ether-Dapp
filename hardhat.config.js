@@ -23,10 +23,6 @@ module.exports = {
       }
     }
   }, 
-  paths: {
-    sources: "./contracts",
-    artifacts: "./Context"
-  },
   mocha: {
     timeout: 4000
   }
