@@ -18,7 +18,7 @@ import images from "../../img";
 import { TransferContext } from "../../Context/TransferContext";
 
 const NavBar = () => {
-  //----USESTATE COMPONNTS
+  //----USESTATE COMPONENTS
   const [discover, setDiscover] = useState(false);
   const [help, setHelp] = useState(false);
   const [notification, setNotification] = useState(false);
@@ -131,12 +131,9 @@ const NavBar = () => {
           {/* CREATE BUTTON SECTION */}
           <div className={Style.navbar_container_right_button}>
             {currentAccount == "" ? (
-              <Button btnName="Connect" handleClick={() => connectWallet()} />
+              <Button btnName={`${truncate(currentAccount, 4, 4, 11)}`} />
             ) : (
-              <Button
-                btnName="Create"
-                handleClick={() => router.push("/uploadNFT")}
-              />
+              <Button btnName="Connect Wallet" handleClick={() => connectWallet()} />
             )}
           </div>
 
