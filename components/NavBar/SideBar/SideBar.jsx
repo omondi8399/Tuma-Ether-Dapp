@@ -123,19 +123,19 @@ const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
         This is a decentralized application (DApp) that enables users to securely and conveniently transfer Ether (ETH) from one Ethereum account to another.
         </p>
         <div className={Style.sideBar_social}>
-          <a href="#">
+          <a href="">
             <TiSocialFacebook />
           </a>
-          <a href="#">
+          <a href="">
             <TiSocialLinkedin />
           </a>
-          <a href="#">
+          <a href="">
             <TiSocialTwitter />
           </a>
-          <a href="#">
+          <a href="">
             <TiSocialYoutube />
           </a>
-          <a href="#">
+          <a href="">
             <TiSocialInstagram />
           </a>
         </div>
@@ -181,19 +181,6 @@ const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
             </div>
           )}
         </div>
-      </div>
-
-      <div className={Style.sideBar_button}>
-        {currentAccount == "" ? (
-          <Button btnName="connect" handleClick={() => connectWallet()} />
-        ) : (
-          <Button
-            btnName="Create"
-            handleClick={() => router.push("/")}
-          />
-        )}
-
-        <Button btnName="Connect Wallet" handleClick={() => {}} />
       </div>
     </div>
   );
