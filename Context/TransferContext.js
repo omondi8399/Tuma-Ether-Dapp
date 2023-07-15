@@ -8,19 +8,6 @@ import { TransferFundsAddress, TransferFundsABI } from "./constants";
 
 //---CONNECTING WITH SMART CONTRACT
 
-const connectingWithSmartContract = async () => {
-  try {
-    const web3Modal = new Wenb3Modal();
-    const connection = await web3Modal.connect();
-    const provider = new ethers.providers.Web3Provider(connection);
-    const signer = provider.getSigner();
-    const contract = fetchContract(signer);
-    return contract;
-  } catch (error) {
-    console.log("Something went wrong while connecting with contract");
-  }
-};
-
 
 export const TransferContext= React.createContext();
 
