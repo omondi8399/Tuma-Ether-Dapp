@@ -133,7 +133,7 @@ const NavBar = () => {
             {currentAccount == "" ? (
               <Button btnName={currentAccount} />
             ) : (
-              <Button btnName="Connect Wallet" handleClick={() => connectWallet()} />
+              <Button btnName="Connect" handleClick={() => connectWallet()} />
             )}
           </div>
 
