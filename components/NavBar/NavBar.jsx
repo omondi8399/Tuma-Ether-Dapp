@@ -11,7 +11,6 @@ import { useRouter } from "next/router";
 //INTERNAL IMPORT
 import Style from "./NavBar.module.css";
 import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
-import { Button } from "../componentsindex";
 import images from "../../img";
 
 //IMPORT FROM SMART CONTRACT
@@ -78,7 +77,7 @@ const NavBar = () => {
   };
 
   //SMART CONTRACT SECTION
-  const { currentAccount, connectWallet } = useContext(
+  const { currentAccount } = useContext(
     TransferContext
   );
 
@@ -128,14 +127,6 @@ const NavBar = () => {
             {notification && <Notification />}
           </div>
 
-          {/* CREATE BUTTON SECTION */}
-          <div className={Style.navbar_container_right_button}>
-            {currentAccount ? (
-              <Button btnName="Connect" handleClick={() => connectWallet()} />
-            ) : (
-              <Button btnName={currentAccount} />
-            )}
-          </div>
 
           {/* USER PROFILE */}
 
@@ -176,7 +167,6 @@ const NavBar = () => {
         </div>
       )}
 
-      {/* {openError && <Error />} */}
     </div>
   );
 };
