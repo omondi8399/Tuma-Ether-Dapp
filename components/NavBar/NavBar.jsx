@@ -131,7 +131,7 @@ const NavBar = () => {
           {/* CREATE BUTTON SECTION */}
           <div className={Style.navbar_container_right_button}>
             {currentAccount == "" ? (
-              <Button btnName={`${truncate(currentAccount, 4, 4, 11)}`} />
+              <Button btnName={currentAccount} />
             ) : (
               <Button btnName="Connect Wallet" handleClick={() => connectWallet()} />
             )}
